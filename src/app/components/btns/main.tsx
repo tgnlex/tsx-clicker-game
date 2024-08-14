@@ -1,4 +1,4 @@
-import {addClick} from '../lib/click.ts';
+import {addClick} from '../../lib/click.ts';
 
 function GameButton() {
   return (

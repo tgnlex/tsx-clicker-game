@@ -1,25 +1,22 @@
 import '../style/app.css';
-import '../style/game.css';
 import state from './state/state.ts';
-import GameButton from './components/btn-main.tsx';
-import BuildButton from './components/btn-buy.tsx'
-
+import PrimaryWindow from './components/primary-window.tsx';
+import BuildSection from './components/buildings.tsx';
 export function App() {
   
   return (
     <div id="app">
-      <main class="main-section">
-      
-        <div id="stats-main">
-          <p id="coins">Coins: {state.coins.value}</p>
-          <p id="income">Income: {state.income}</p>
-        </div>
-        <GameButton />
+      <header>
+        <h1>TSClicker</h1>
+      </header>
+      <main id="main-row">
+        <aside id="left-menu"></aside>
+        <PrimaryWindow />
+        <aside id="right-menu"></aside>
       </main>
-      <div id="buy-buttons">
-        <BuildButton building={state.carts} />
-        <BuildButton building={state.stalls} />
-      </div>
+      <footer>
+        <BuildSection />
+      </footer>
     </div>
   )
 }
