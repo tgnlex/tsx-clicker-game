@@ -7,9 +7,9 @@
 
 #btn-main {
   border: 1px solid black;
-  height: 100px;
-  width: 100px;
-  borer-radius: 100%;
+  height: 150px;
+  width: 150px;
+  border-radius: 100%;
 }
 
 #build-buttons {
