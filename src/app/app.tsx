@@ -1,22 +1,28 @@
-import '../style/app.css';
-import state from './state/state.ts';
-import PrimaryWindow from './components/primary-window.tsx';
-import BuildSection from './components/buildings.tsx';
+import state from './lib/state.ts';
+import {loop} from './lib/loop.ts';
+import Main from './components/center.tsx';
+import LeftMenu from './components/layout/left-menu.tsx';
+import RightMenu from './components/layout/right-menu.tsx';
+import BuildingShop from './components/buildings.tsx';
+import Header from './components/layout/header.tsx';
+import Footer from './components/layout/footer.tsx'
+import Row from './components/ui/row.tsx';
+import './style/app.css';
+
+
+
 export function App() {
-  
+  loop();
   return (
     <div id="app">
-      <header>
-        <h1>TSClicker</h1>
-      </header>
-      <main id="main-row">
-        <aside id="left-menu"></aside>
-        <PrimaryWindow />
-        <aside id="right-menu"></aside>
-      </main>
-      <footer>
-        <BuildSection />
-      </footer>
+      <Header />
+      <Row id="main-row">
+        <LeftMenu />
+        <Main />
+        <RightMenu />
+      </Row>
+      <BuildingShop />
+      <Footer />
     </div>
   )
 }

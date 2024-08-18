@@ -1,5 +1,6 @@
-import state from '../state/state.ts';
-import BuildButton from './btns/build.tsx';
+import state from '../lib/state.ts';
+import BuildButton from './controls/build.tsx';
+
 function BuildSection() {
   return (
     <div id="build-buttons">

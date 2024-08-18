@@ -1,4 +1,4 @@
-import state from '../state/state.ts';
+import state from '../lib/state.ts';
 function ScoreDisplay() {        
   return (
     <div id="score">

@@ -1,5 +1,6 @@
+@import './stylib/classes.css'; 
+
 #app {
-  max-width: 1920px;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
@@ -17,9 +18,27 @@
   flex-direction: row;
   margin-top: 5%;
 }
+#left-menu, #right-menu {
+  border: 2px solid black;
+  width: 10%;
+}
+#header-text {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
 
 .btn-buy {
   margin: 0.5vh;
+}
+
+#center-sect {
+  width: 90%;
+  height: 75%;
+}
+
+#main-row {
+  width: 100%;
 }
 
 

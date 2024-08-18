@@ -1,5 +1,4 @@
 
-}
 // Will be Incorporated much later...
 const uniques = {
     house:        { owned: false,  level: 1 },
@@ -13,6 +12,6 @@ const uniques = {
     library:      { owned: false,  level: 1 }, 
     gem_mine:     { owned: false,  level: 1 },
     apothecary:   { owned: false,  level: 1 },
-    trading_post: { owned: false,  level: 1 },
+    trading_post: { owned: false,  level: 1 }
 }
-export {buildings, uniques}
+export default uniques;
