@@ -3,27 +3,21 @@ import Upgrade from './constructors/upgrade.ts';
 import IUpgrade from '../../interface/upgrade.ts';
 import state from './state.ts';
 
-const ironWheels: IUpgrade = new Upgrade({
+const ironWheels = new Upgrade({
   name: "Iron Wheels",
   price: signal(100),
-  required: () => {
+  requireCheck: function() {
     if (state.carts.owned.value > 0) { 
-      this.reqs.value = true;
+      console.log('requirements for iron wheels are satisfied')
+      this.reqs.value == true;
     }
   },
-  activate: () => {
-    if (this.owned) {
-      state.carts.baseIncome.value = state.carts.baseIncome.value * 2;
-    } else { 
-      return;
-    } 
+  activate: function() {
+    console.log('activating iron wheels')
+    state.carts.baseIncome.value = state.carts.baseIncome.value * 2;
   }
 });
 
-const upgrades = {};
-upgrades.ironWheels = ironWheels;
-
-export default upgrades;
 
 
-
+export {ironWheels};

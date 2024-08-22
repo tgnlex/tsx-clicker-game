@@ -8,8 +8,8 @@ function addIncome() {
 
 function upgradeLoop() {
   window.setInterval(function() {
-    updateStore();
-  }, 500)
+//    updateStore();
+  }, 1000)
 };
 function incomeLoop() {
    window.setInterval(function() {

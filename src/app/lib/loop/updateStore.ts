@@ -1,5 +1,5 @@
 import state from '../state.ts';
-import upgrades from '../upgrades.ts'
+import {ironWheels} from '../upgrades.ts'
 import { upgradeStore } from '../store/upgrade.ts';
 
 function addUpgrade(upgrade) {
@@ -7,10 +7,12 @@ function addUpgrade(upgrade) {
   upgradeStore.push(upgrade);
 }
 function updateStore() {
-  if (upgrades.ironWheels.owned == false && upgrades.ironWheels.stored == false) {
-    upgrades.ironWheels.check();
-    if (upgrades.ironWheels.available) {
-      addUpgrade(upgrades.ironWheels);
+  if (ironWheels.stored == false) {
+    ironWheels.requireCheck();
+    ironWheels.check();
+    if (ironWheels.available.value == true) {
+      console.log('attempting to add upgrade')
+      addUpgrade(ironWheels);
     }
   }
 };

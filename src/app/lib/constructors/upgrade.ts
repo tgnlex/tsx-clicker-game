@@ -9,12 +9,12 @@ class Upgrade {
   constructor(
     name: string, 
     price: number, 
-    required: () => any, 
+    requireCheck: () => any, 
     activate: () => any
   ) {
     this.name = name;
     this.price = price;
-    this.required = required;
+    this.requireCheck = requireCheck;
     this.activate = activate;
   }
   buy() {
@@ -25,9 +25,9 @@ class Upgrade {
     else {alert(`Not enough coins to purchase ${this.name}`)}
   }
   check() {
-    if (this.reqs.value == true) { 
+    console.info(this.reqs.value)
+    if (this.reqs.value) { 
       this.available.value = true;
-      console.log(`${this.name} available: ${this.available.value}`)
     }
     else {return;
     }
