@@ -1,0 +1,16 @@
+
+#btn-main {
+  border: 1px solid black;
+  height: 150px;
+  width: 150px;
+  border-radius: 100%;
+}
+
+#build-buttons {
+  display: flex;
+  flex-direction: row;
+  margin-top: 5%;
+}
+.btn-buy {
+  margin: 0.5vh;
+}

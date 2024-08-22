@@ -7,12 +7,19 @@ interface Props {
 function BuildButton(props: Props) {
   const handleBuy = () => { buyBuilding(props.building)}
   return (
-    <button id={`btn-${props.building.name}`} onclick={handleBuy} class="btn-buy">
+    <div class="buy-building-wrapper">
+      <div class="building-count">
+        <p class="text">
+        {props.building.name}s: {props.building.owned}
+        </p>
+      </div>
+      <button id={`btn-${props.building.name}`} onclick={handleBuy} class="btn-buy">
         <p>
           Buy {props.building.name}<br/>
           $ {props.building.price}
         </p>
-    </button>
+      </button> 
+    </div>
   )
 }
 export default BuildButton;

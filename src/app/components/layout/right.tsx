@@ -1,18 +1,9 @@
-
-
+import UpgradeList from '../upgrades.tsx';
 function RightMenu() {
   return (
     <section id="right-menu">
       <p>Upgrades</p>
-      <ul class="list">
-        <button>untitled</button>
-        <button>untitled</button>
-        <button>untitled</button>
-        <button>untitled</button>
-        <button>untitled</button>
-        <button>untitled</button>
-        <button>untitled</button>
-      </ul>
+      <UpgradeList />
     </section>
   )
 }

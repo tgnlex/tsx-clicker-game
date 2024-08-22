@@ -1,5 +1,5 @@
 import ScoreDisplay from './score.tsx';
-import GameButton from './controls/clicker.tsx';
+import GameButton from './btns/clicker.tsx';
 
 function Main() {
   return (

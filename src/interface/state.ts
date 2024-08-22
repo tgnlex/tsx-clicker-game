@@ -1,6 +1,6 @@
 import Building from './building.ts';
 
-export interface State {
+export interface IState {
   total_clicks?: number, 
   coins?: number, 
   base_click?: number; 

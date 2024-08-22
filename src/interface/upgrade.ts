@@ -1,11 +1,15 @@
 
 
-interface Upgrade {
+interface IUpgrade {
   name: string;
-  price: string;
+  price: number;
   owned: boolean;
   available: boolean;
-  effect: () => any;
+  reqs: boolean;
+  required: any;
+  check: () => void;
+  buy: () => void;
+  activate: () => void;
 }
 
-export default Upgrade;
+export default IUpgrade;

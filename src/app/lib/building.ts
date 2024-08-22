@@ -3,7 +3,7 @@ import state from './state.ts';
 
 
 export function updateIncome(building: Building) {
-  state.income.value = state.income.value + building.baseIncome * building.owned;
+  state.income.value = state.income.value + building.baseIncome.value * building.owned.value;
 }
 
 export function updatePrice(building: Building) {
@@ -11,12 +11,12 @@ export function updatePrice(building: Building) {
   return building.price.value;
 }
 export function buyBuilding(building: Building) {
-  if (state.coins.value >= building.price) {
-    building.owned += 1;
-    state.coins.value = state.coins.value - building.price;
+  if (state.coins.value >= building.price.value) {
+    building.owned.value += 1;
+    state.coins.value = state.coins.value - building.price.value;
     updateIncome(building);
     building.price.value = updatePrice(building); 
   } else {
-    console.log(`Not enough coins to porchase ${building.name}`)
+    alert(`Not enough coins to porchase ${building.name}`)
   }
 }
