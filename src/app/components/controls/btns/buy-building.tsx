@@ -1,5 +1,6 @@
-import {buyBuilding} from '../../lib/building';
+import {buyBuilding} from '../../../lib/building.ts';
 import type {Building} from '../../../interface/building.ts';
+
 interface Props {
   building: Building;
 }

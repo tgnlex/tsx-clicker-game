@@ -1,4 +1,4 @@
-import state from '../lib/state.ts';
+import state from '../../lib/state.ts';
 import BuildButton from './btns/buy-building.tsx';
 
 function BuildSection() {

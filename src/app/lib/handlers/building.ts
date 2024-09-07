@@ -17,6 +17,6 @@ export function buyBuilding(building: Building) {
     updateIncome(building);
     building.price.value = updatePrice(building); 
   } else {
-    alert(`Not enough coins to porchase ${building.name}`)
+    alert(`Not enough coins to purchase ${building.name}`)
   }
 }

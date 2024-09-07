@@ -1,4 +1,4 @@
-import UpgradeList from '../upgrades.tsx';
+import UpgradeList from '../controls/upgrade-list.tsx';
 function RightMenu() {
   return (
     <section id="right-menu">

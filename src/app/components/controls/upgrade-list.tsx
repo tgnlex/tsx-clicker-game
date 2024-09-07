@@ -1,5 +1,5 @@
 import {Component} from 'preact';
-import Upgrades from './btns/upgrade.tsx';
+import Upgrades from './upgrades.tsx';
 
 class UpgradeList extends Component {
   render() {
@@ -10,4 +10,5 @@ class UpgradeList extends Component {
     )
   }
 }
+
 export default UpgradeList;

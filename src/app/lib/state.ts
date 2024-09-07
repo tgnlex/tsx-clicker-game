@@ -2,9 +2,11 @@ import {signal} from '@preact/signals';
 import {calculateIncome} from '../lib/income.ts';
 import {IState} from '../../interface/state.ts';
 
-const state: IState = {}
+const state = {
 
 state.total_clicks = signal(0);
+state.total_upgrades = signal(0);
+state.total_earnings = signal(0);
 state.coins =  signal(0);
 state.income = signal(0);
 state.base_click = signal(1);
